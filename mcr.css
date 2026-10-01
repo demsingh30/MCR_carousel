@@ -1,0 +1,13 @@
+body {
+    background: #0d0d0d;
+    color: #e8e0d5;
+    margin:0;
+    font-family: "IBM Plex Mono", monospace;
+    padding: 40px 56px;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content:space-between;
+}
