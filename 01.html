@@ -20,34 +20,29 @@
     <header> 
         <p>MCR - ERAS</p>
         <p id="numbers">01/04</p>
-    
     </header>
 <main>
-    <div>
-        <img src="bullety_cover.jpg" alt="MCR I brought you my bullets you brought me your love" id="albumart"/>
-    </div>
-     <div>
+    <div class="era">
         <button id="arrowgoback" aria-label="back arrow goes backwards">←</button>
+        <img src="bullety_cover.jpg" alt="MCR I brought you my bullets you brought me your love" id="albumart"/>
+        <div class="era-info">
+            <p id="album-year">ERA 01 - 2002</p>
+            <h1 id="albumname">I Brought You My Bullets, You Brought Me Your Love</h1>
+            <p id="description">Raw, gritty, basement-show energy.</p>
+            <button id="playfavsong">Play Vampires Will Never Hurt You</button>
+            <audio id="song">
+                <source src="vampires.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
         <button id="arrowgofwd" aria-label="forward arrow goes to next">→</button>
     </div>
-    <div>
-    <p id="album-year"> ERA 01 - 2002 </p>
-    <h1 id="albumname">I Brought You My Bullets, You Brought Me Your Love</h1>
-    <p id="description">Raw, gritty, basement-show energy.</p>
-    </div>
-    
-<div>
-    <button id="playfavsong">Play Vampires Will Never Hurt You</button>
-    <audio id="song">
-    <source  src="vampires.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-    </audio>
-</div>
- <div>
-    <button class="dot active" aria-label="scrolling dots">.</button>
-    <button class="dot" aria-label="scrolling dots">.</button>
-    <button class="dot" aria-label="scrolling dots">.</button>
-    <button class="dot" aria-label="scrolling dots">.</button>
+
+    <div class="dots">
+        <button class="dot active" aria-label="scrolling dots">.</button>
+        <button class="dot" aria-label="scrolling dots">.</button>
+        <button class="dot" aria-label="scrolling dots">.</button>
+        <button class="dot" aria-label="scrolling dots">.</button>
     </div>
 </main>
 <footer>

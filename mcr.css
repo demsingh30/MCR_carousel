@@ -8,6 +8,49 @@ body {
 }
 
 header {
+    text-transform: uppercase;
     display: flex;
     justify-content:space-between;
+     font-size: 13px;
+     letter-spacing: 0.14em;
+     color:#9a948c;
 }
+.era {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 56px;
+}
+
+.era-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#album-year {
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing: .14em;
+    color:#9a948c;
+}
+#albumname {
+    font-size: 46px;
+    font-family: "Special Elite" , monospace;
+}
+#description {
+    font-size:16px;
+    line-height: 1.6px;
+}
+#albumart {
+    object-fit: cover; 
+    width: 380px;
+    height: 380px;
+}
+#arrowgoback , #arrowgofwd {
+    border-radius: 50%;
+    width: 56px;
+    height:56px;
+}
+
+
