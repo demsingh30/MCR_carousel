@@ -62,6 +62,9 @@ const rightArrow = document.querySelector('#arrowgofwd')
 
 const backArrow = document.querySelector('#arrowgoback')
 
+const dots = document.querySelectorAll('.dot')
+
+
 
 
 function updateEra () {
@@ -72,6 +75,12 @@ albumArt.alt = eras[currentAlbum].alt
 albumYear.textContent = (`ERA 0${currentAlbum+1} - ${eras[currentAlbum].year }`)
 headerCount.textContent = (`0${currentAlbum + 1}/0${eras.length}`)
 albumSong.textContent = (`Play ${eras[currentAlbum].songName}`)
+albumName.style.fontFamily = eras[currentAlbum].titleFont
+
+dots.forEach(function(dot) {
+  dot.classList.remove('active')
+  dots[currentAlbum].classList.add('active')
+})
 }
 
 
