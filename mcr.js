@@ -7,7 +7,11 @@ const eras = [
     cover: 'bullety_cover.jpg',
     alt: 'I Brought You My Bullets, You Brought Me Your Love album cover',
     songName: 'Vampires Will Never Hurt You',
-    songFile: 'vampires.mp3'
+    songFile: 'vampires.mp3' ,
+    backgroundColor: '#0d0d0d',
+    titleColor: '#e8e0d5',
+    accentColor: '#9a948c'
+
   },
   {
     year: 2004,
@@ -17,7 +21,10 @@ const eras = [
     cover: 'three_cheers.jpg',
     alt: 'Three Cheers for Sweet Revenge album cover',
     songName: 'Helena',
-    songFile: 'helena.mp3'
+    songFile: 'helena.mp3' ,
+    backgroundColor: '#6b0f1a',
+    titleColor: '#e8e0d5',
+    accentColor: '#8a4a52'
   },
   {
     year: 2006,
@@ -27,7 +34,10 @@ const eras = [
     cover: 'black_parade.webp',
     alt: 'The Black Parade album cover',
     songName: 'Welcome to the Black Parade',
-    songFile: 'blackparade.mp3'
+    songFile: 'blackparade.mp3' , 
+    backgroundColor: '#000000',
+    titleColor: '#f2f2f2',
+    accentColor: '#9a9a9a'
   },
   {
     year: 2010,
@@ -37,7 +47,10 @@ const eras = [
     cover: 'danger_days.jpg',
     alt: 'Danger Days: The True Lives of the Fabulous Killjoys album cover',
     songName: 'Na Na Na',
-    songFile: 'nanana.mp3'
+    songFile: 'nanana.mp3' ,
+    backgroundColor: '#fcd21d',
+    titleColor: '#111111',
+    accentColor: '#ff2e63'
   }
 ]
 
@@ -64,41 +77,68 @@ const backArrow = document.querySelector('#arrowgoback')
 
 const dots = document.querySelectorAll('.dot')
 
+const player = new Audio()
+
+
+albumSong.addEventListener('click', function nextSong() { 
+if (player.paused) {
+player.play()
+albumSong.textContent = `Pause ${eras[currentAlbum].songName}`
+}
+else { 
+player.pause()
+albumSong.textContent = `Play ${eras[currentAlbum].songName}`
+}
+})
 
 
 
-function updateEra () {
-albumName.textContent = eras[currentAlbum].title
-albumDesc.textContent = eras[currentAlbum].description
-albumArt.src = eras[currentAlbum].cover
-albumArt.alt = eras[currentAlbum].alt
-albumYear.textContent = (`ERA 0${currentAlbum+1} - ${eras[currentAlbum].year }`)
-headerCount.textContent = (`0${currentAlbum + 1}/0${eras.length}`)
-albumSong.textContent = (`Play ${eras[currentAlbum].songName}`)
-albumName.style.fontFamily = eras[currentAlbum].titleFont
+function updateEra() {
+  albumName.textContent = eras[currentAlbum].title
+  albumDesc.textContent = eras[currentAlbum].description
+  albumArt.src = eras[currentAlbum].cover
+  albumArt.alt = eras[currentAlbum].alt
+  albumYear.textContent = `ERA 0${currentAlbum + 1} - ${eras[currentAlbum].year}`
+  headerCount.textContent = `0${currentAlbum + 1}/0${eras.length}`
+  albumSong.textContent = `Play ${eras[currentAlbum].songName}`
+  albumName.style.fontFamily = eras[currentAlbum].titleFont
+  player.pause()
+  player.src = eras[currentAlbum].songFile
+  document.documentElement.style.setProperty('--bg', eras[currentAlbum].backgroundColor)
+  document.documentElement.style.setProperty('--title', eras[currentAlbum].titleColor)
+  document.documentElement.style.setProperty('--accent' , eras[currentAlbum].accentColor)
+  
 
-dots.forEach(function(dot) {
-  dot.classList.remove('active')
+  dots.forEach(function(dot) {
+    dot.classList.remove('active')
+    
+  })
   dots[currentAlbum].classList.add('active')
-})
 }
 
-
-rightArrow.addEventListener('click' , function goNext () {
-currentAlbum++
-if (currentAlbum === eras.length) {
+rightArrow.addEventListener('click', function goNext() {
+  currentAlbum++
+  if (currentAlbum === eras.length) {
     currentAlbum = 0
-}
-updateEra()
+  }
+  updateEra()
 })
 
-backArrow.addEventListener('click' , function goBack () {
-currentAlbum--
-if (currentAlbum < 0) {
-    currentAlbum = eras.length -1
-}
-updateEra()
+backArrow.addEventListener('click', function goBack() {
+  currentAlbum--
+  if (currentAlbum < 0) {
+    currentAlbum = eras.length - 1
+  }
+  updateEra()
+})
+
+dots.forEach(function(dot, index) {
+  dot.addEventListener('click', function goToDot() {
+    currentAlbum = index
+     updateEra ()
+  })
 })
 
 updateEra()
+
 
