@@ -48,7 +48,7 @@ const eras = [
     alt: 'Danger Days: The True Lives of the Fabulous Killjoys album cover',
     songName: 'Na Na Na',
     songFile: 'nanana.mp3' ,
-    backgroundColor: '#f0d98a,
+    backgroundColor: '#f0d98a',
     titleColor: '#111111',
     accentColor: '#ff2e63'
   }
