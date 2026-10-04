@@ -37,8 +37,7 @@ const eras = [
 A single number, `currentAlbum`, keeps track of which era is showing. The arrows and dots change that number, and one function, `updateEra()`, repaints the whole page from the data. Nothing on the page is hardcoded per era.
  
 ## What I Learned
- 
-<!-- Edit this in your own words! -->
+
  
 - **Arrays of objects:** `eras[currentAlbum].title` picks the album, then the detail
 - **Separating data from display:** one function reads the data and updates the page, so adding a 5th era would only mean adding one object
