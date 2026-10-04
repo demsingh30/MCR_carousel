@@ -2,7 +2,7 @@
  
 An interactive carousel that walks through the four album eras of My Chemical Romance. Each era changes the album art, title font, description, and featured song.
  
-**🔗 Live site:** [demsingh30.github.io/mcr_project](https://demsingh30.github.io/mcr_project/)
+**🔗 Live site:** 🔗 Live site: demsingh30.github.io/MCR_carousel
  
 
 ![MCR Eras screenshot](screenshot01.png)
@@ -50,8 +50,8 @@ A single number, `currentAlbum`, keeps track of which era is showing. The arrows
 ## Run It Locally
  
 1. Clone the repo
-```bash
-   git clone https://github.com/demsingh30/mcr_project.git
+```bashlive link  → demsingh30.github.io/MCR_carousel
+clone line → github.com/demsingh30/MCR_carousel.git
 ```
 2. Open `index.html` in your browser
 ---
