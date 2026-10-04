@@ -2,8 +2,7 @@
  
 An interactive carousel that walks through the four album eras of My Chemical Romance. Each era changes the album art, title font, description, and featured song.
  
-**🔗 Live site:** [demsingh30.github.io/mcr_project](https://demsingh30.github.io/mcr_project/)
- 
+**🔗 Live site:** [demsingh30.github.io/MCR_carousel](https://demsingh30.github.io/MCR_carousel/)
 
 ![MCR Eras screenshot](screenshot01.png)
 
@@ -37,8 +36,7 @@ const eras = [
 A single number, `currentAlbum`, keeps track of which era is showing. The arrows and dots change that number, and one function, `updateEra()`, repaints the whole page from the data. Nothing on the page is hardcoded per era.
  
 ## What I Learned
- 
-<!-- Edit this in your own words! -->
+
  
 - **Arrays of objects:** `eras[currentAlbum].title` picks the album, then the detail
 - **Separating data from display:** one function reads the data and updates the page, so adding a 5th era would only mean adding one object
@@ -51,8 +49,8 @@ A single number, `currentAlbum`, keeps track of which era is showing. The arrows
 ## Run It Locally
  
 1. Clone the repo
-```bash
-   git clone https://github.com/demsingh30/mcr_project.git
+```bashlive link  → demsingh30.github.io/MCR_carousel
+clone line → github.com/demsingh30/MCR_carousel.git
 ```
 2. Open `index.html` in your browser
 ---
